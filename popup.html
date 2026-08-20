@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Virtual File Renamer</title>
+
+  <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+
+  <main class="container">
+
+    <header class="header">
+
+      <div>
+        <h1>Virtual File Renamer</h1>
+
+        <p>
+          Change the filename used during uploads
+        </p>
+      </div>
+
+      <label class="switch">
+        <input
+          type="checkbox"
+          id="enabled"
+        >
+
+        <span class="slider"></span>
+      </label>
+
+    </header>
+
+
+    <section class="section">
+
+      <label for="fileName">
+        Filename
+      </label>
+
+      <div class="input-wrapper">
+
+        <input
+          type="text"
+          id="fileName"
+          placeholder="My CV"
+          autocomplete="off"
+        >
+
+        <span id="extension">
+          .pdf
+        </span>
+
+      </div>
+
+      <p class="description">
+        This name is only used during uploads.
+        Your original file will not be renamed.
+      </p>
+
+    </section>
+
+
+    <section class="preview">
+
+      <span class="preview-label">
+        Preview
+      </span>
+
+      <div class="preview-file">
+
+        <span class="file-icon">
+          PDF
+        </span>
+
+        <div>
+
+          <strong id="previewName">
+            Uploaded File.pdf
+          </strong>
+
+          <small>
+            Used only during upload
+          </small>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <footer>
+
+      <span id="status"></span>
+
+      <button id="save">
+        Save
+      </button>
+
+    </footer>
+
+  </main>
+
+  <script src="popup.js"></script>
+
+</body>
+</html>
